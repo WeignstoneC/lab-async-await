@@ -2,13 +2,9 @@
 
 // Function to fetch posts from JSONPlaceholder API using async/await
 async function fetchPosts() {
-  try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-    const posts = await response.json();
-    return posts;
-  } catch (error) {
-    console.error('Error fetching posts:', error);
-  }
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const posts = await response.json();
+  return posts;
 }
 
 // Function to display posts in the DOM
@@ -40,9 +36,7 @@ function displayPosts(posts) {
 // Main function to initialize the app
 async function init() {
   const posts = await fetchPosts();
-  if (posts) {
-    displayPosts(posts);
-  }
+  displayPosts(posts);
 }
 
 // Call init function when the script loads
