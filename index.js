@@ -33,7 +33,7 @@ function displayPosts(posts) {
   }
 }
 
-// Main function to initialize the app
+// Main function to initialize the app using async/await
 async function init() {
   const posts = await fetchPosts();
   displayPosts(posts);
