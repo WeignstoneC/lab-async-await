@@ -40,3 +40,28 @@ You are working for a social media website, they need to build functionality to 
    - Apply await to fetch
 
 
+weignstone@weignstone-ThinkPad-T470:~/Documents/lab-async-await$ npm test
+
+> lab-async-await@1.0.0 test
+> mocha --timeout 5000 --reporter spec
+
+
+
+  Asynchronous Fetching 
+    1) should fetch to external api and add information to page
+    2) should create an h1 and p element to add
+
+
+  0 passing (425ms)
+  2 failing
+
+  1) Asynchronous Fetching 
+       should fetch to external api and add information to page:
+     AssertionError: expected '\n    ' to include 'sunt aut'
+      at Context.<anonymous> (test/indexTest.js:47:38)
+
+  2) Asynchronous Fetching 
+       should create an h1 and p element to add:
+     TypeError: Cannot read properties of null (reading 'textContent')
+      at Context.<anonymous> (test/indexTest.js:54:15)
+
